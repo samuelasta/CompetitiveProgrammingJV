@@ -55,6 +55,4 @@ public class A144Recursive {
         positions(list, n + 1);
 
     }
-
-
 }
