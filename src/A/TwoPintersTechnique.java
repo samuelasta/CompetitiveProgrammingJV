@@ -28,6 +28,7 @@ public class TwoPintersTechnique {
 
         for (int i = 0; i < n; i++) {
             System.out.print(list[i] + " ");
+
         }
     }
 }
