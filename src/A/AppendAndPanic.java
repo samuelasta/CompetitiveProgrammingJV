@@ -1,6 +1,5 @@
 package A;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AppendAndPanic {
@@ -11,7 +10,6 @@ public class AppendAndPanic {
         Scanner sc = new Scanner(System.in);
 
         String word = sc.next();
-        int cont = 0;
 
         for (int i = word.length()-1; i >= 0; i--){
 
@@ -19,10 +17,10 @@ public class AppendAndPanic {
 
             if(i != word.length()-1){
 
-                String subString = word.substring(i+1, word.length()-1);
+                String subString = word.substring(i+1);
                 if(verifyExistance(aux, subString)){
                     String subString2 = word.substring(0, i+1);
-                    cont = subString2.length();
+                    int cont = subString2.length();
                     System.out.println(cont);
                     break;
                 }
@@ -32,7 +30,7 @@ public class AppendAndPanic {
 
     public static boolean verifyExistance(String aux, String subString){
 
-        for(int i = 0 ; i < subString.length()-1; i++){
+        for(int i = 0 ; i < subString.length(); i++){
             if(aux.equals(String.valueOf(subString.charAt(i)))){
                 return true;
             }
